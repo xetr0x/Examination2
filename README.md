@@ -10,7 +10,7 @@ A template for a Python development project.
 
 
 
-123testing
+Get going
 --------------------------
 
 This is how you can work with the development environment.
