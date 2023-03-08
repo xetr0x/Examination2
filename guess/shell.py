@@ -15,7 +15,9 @@ import game
 class Shell(cmd.Cmd):
     print("testing")
     
-    
+    def __init__(self):
+        super().__init__()
+        self.game = game.Game()
     
     
     

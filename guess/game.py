@@ -8,8 +8,14 @@ import diceFaces
 
 
 class Game:
-    diceFaces.DiceFaces.three()
 
+    """the game class containing the game"""
+    diceFaces.DiceFaces.three()
+    
+    def __init__(self):
+        """init the object"""
+        
+        
 
 
 
