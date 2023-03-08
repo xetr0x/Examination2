@@ -12,3 +12,13 @@ class Highscore():
             self.player3 = player3  # if player 3 and 4 doesnt exist
         if player4 is not None:
             self.player4 = player4
+
+    def add_scores(self, player1, player2, player3, player4):
+
+
+
+    def get_high_scores():
+        print("--------------------------------------------------")
+        print()
+        print()
+        print()

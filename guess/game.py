@@ -4,13 +4,12 @@
 """Guess the number I am thinking of."""
 
 import random
-import diceFaces
+import dice
 
 
 class Game:
 
     """the game class containing the game"""
-    diceFaces.DiceFaces.three()
     
     def __init__(self):
         """init the object"""
