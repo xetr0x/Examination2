@@ -4,16 +4,17 @@
 """Guess the number I am thinking of."""
 
 import random
+import diceFaces
 
 
 class Game:
-    print("testing")
+    diceFaces.DiceFaces.three()
 
 
 
 
 
-    
+
     # """Example of dice class."""
 
     # low_number = 1
