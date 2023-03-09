@@ -10,8 +10,12 @@ class Highscore():
         self.player2 = player2
         self.player3 = player3
         self.player4 = player4
-        players = {"Player 1": player1, "Player 2": player2,
-                   "Player 3": player3, "Player 4": player4}
+        players = {"Player 1": self.player1, "Player 2": self.player2,
+                   "Player 3": self.player3, "Player 4": self.player4}
+        
+
+
+    def add_scores(self, player, points):
         
     def sort(self, players):      # will be used as refresh
         """adds and sorts scores"""
