@@ -13,7 +13,7 @@ class Highscore():
         players = {"Player 1": player1, "Player 2": player2,
                    "Player 3": player3, "Player 4": player4}
         
-    def add_scores(self, players):      # will be used as refresh
+    def sort(self, players):      # will be used as refresh
         """adds and sorts scores"""
         # Player 3 - 4 will always exist but will be as none if not played
         # This way we can make them invinsible if not played, but still exist
@@ -33,6 +33,8 @@ class Highscore():
                     thelist[j][1]
 
         return thelist   # returns sorted list of the players
+    
+
 
     def get_high_scores(self, thelist):
         """shows the highscore table"""
