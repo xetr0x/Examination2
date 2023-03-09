@@ -11,11 +11,16 @@ import highscore
 class Game:
 
     """the game class containing the game"""
-    lol = highscore.Highscore(0, 0)
-    lol.add_scores()
+    lol = highscore.Highscore(0, 0, 0, 0)
+    print(lol.add_scores(2,20,10,4))
+
     
     def __init__(self):
-        """init the object"""
+        """init the object"""   # TODO Loop where all points in a
+        # given round are tracked and thhen added to archive at the end of it
+        # Ex. add_scores(player1Score, Player2Score, Player3Score, Player4Score)
+
+
         
         
 
