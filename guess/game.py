@@ -5,11 +5,14 @@
 
 import random
 import dice
+import highscore
 
 
 class Game:
 
     """the game class containing the game"""
+    lol = highscore.Highscore(0, 0)
+    lol.add_scores()
     
     def __init__(self):
         """init the object"""
