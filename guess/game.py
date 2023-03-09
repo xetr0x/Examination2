@@ -11,8 +11,7 @@ import highscore
 class Game:
 
     """the game class containing the game"""
-    lol = highscore.Highscore(1, 2, 3)
-    print(lol.add_scores(2,20,10))
+
 
     
     def __init__(self):
@@ -20,8 +19,25 @@ class Game:
         # given round are tracked and thhen added to archive at the end of it
         # Ex. add_scores(player1Score, Player2Score, Player3Score, Player4Score)
 
+    def start_game(self, diff=0):
+        """starts the game"""
+        while True:
+            try:
+                playercount = int(input("How many players? 1-4, if the number is 1, you will get an Npc"
+                                        + "to play against "))
+                if 1 <= playercount <= 4:
+                    break
+                else: 
+                    print("invalid choice, only between 1-4!")
+            except ValueError:
+                print("invalid choice, please enter an number between 1 and 4")
+        if playercount == 1 or 2:
+            scores = highscore.Highscore(0, diff)
+        elif playercount == 3:
+            scores = highscore.Highscore(0, 0, 0)
+        elif playercount == 4:
+            scores = highscore.Highscore(0, 0, 0, 0)
 
-        
         
 
 

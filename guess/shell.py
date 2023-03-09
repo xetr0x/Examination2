@@ -13,7 +13,7 @@ import game
 
 
 class Shell(cmd.Cmd):
-    print("testing")
+    """the cmd and its commands"""
     
     def __init__(self):
         super().__init__()

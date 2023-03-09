@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
+import asyncio
 
 class Highscore():
     """class for keeping track of highscore"""
@@ -45,7 +45,7 @@ class Highscore():
             for j in range(0, number-i-1):
                 if thelist[j][1] > thelist[j+1][1]:
                     thelist[j], thelist[j+1] = thelist[j+1], thelist[j]
-
+        # await asyncio.sleep(1) to refresh the code every sec
         return thelist   # Returns sorted list of the players
 
     def get_high_scores(self, thelist):

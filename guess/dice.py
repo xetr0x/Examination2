@@ -11,7 +11,7 @@ class Dice():
     def roll(self):
         """rolls 2 dices and returns their number"""
         dice1 = random.randint(1, 6)
-        dice2 = random.randint(1, 6)
+        dice2 = random.randint(1, 6)  # TODO Simple way to print the dices
         return dice1 and dice2
         
     def dicefaces(self, number):
