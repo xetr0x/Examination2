@@ -11,8 +11,8 @@ import highscore
 class Game:
 
     """the game class containing the game"""
-    lol = highscore.Highscore(0, 0, 0, 0)
-    print(lol.add_scores(2,20,10,4))
+    lol = highscore.Highscore(1, 2, 3)
+    print(lol.add_scores(2,20,10))
 
     
     def __init__(self):
