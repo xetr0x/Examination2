@@ -19,7 +19,9 @@ class Shell(cmd.Cmd):
         super().__init__()
         self.game = game.Game()
     
-    
+    # TODO make some commands that can be useful
+    # TODO making a menu with on press option
+    # TODO look with teacher if keyboard library is allowed
     
     
     
