@@ -19,8 +19,9 @@ class Game:
         # given round are tracked and thhen added to archive at the end of it
         # Ex. add_scores(player1Score, Player2Score, Player3Score, Player4Score)
 
-    def start_game(self, diff=0):
+    def start_game(self, n=1):
         """starts the game"""
+        diff = {1: 0, 2: 10, 3: 15, 4: 20}
         while True:
             try:
                 playercount = int(input("How many players? 1-4, if the number is 1, you will get an Npc"
@@ -32,11 +33,16 @@ class Game:
             except ValueError:
                 print("invalid choice, please enter an number between 1 and 4")
         if playercount == 1 or 2:
-            scores = highscore.Highscore(0, diff)
+            scores = highscore.Highscore(0, diff.get(n))
         elif playercount == 3:
             scores = highscore.Highscore(0, 0, 0)
         elif playercount == 4:
             scores = highscore.Highscore(0, 0, 0, 0)
+        
+        round()
+
+    def round():
+        input("please press space to roll the dices!")
 
         
 
