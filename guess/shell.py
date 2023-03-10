@@ -18,8 +18,14 @@ class Shell(cmd.Cmd):
     def __init__(self):
         super().__init__()
         self.game = game.Game()
+
     
     # TODO make some commands that can be useful
     # TODO making a menu with on press option
     # TODO look with teacher if keyboard library is allowed
+
+    def do_start(self, _):
+        print("the game will start shortly")
+        self.game.start_game()
+
 

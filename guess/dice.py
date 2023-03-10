@@ -7,16 +7,19 @@ class Dice():
     """Everything thats tied to Dices"""
     def __init__(self):
         """init object"""
+        self.value = None
 
     def roll(self):
         """rolls 2 dices and returns their number"""
         dice1 = random.randint(1, 6)
-        dice2 = random.randint(1, 6)  # TODO Simple way to print the dices
-        return dice1 and dice2
-        
+        dice2 = random.randint(1, 6)
+        self.dicefaces(dice1)
+        self.dicefaces(dice2)
+        self.value = (dice1, dice2)
+        return self.value
+
     def dicefaces(self, number):
         """Different faces of dice for visual effect"""
-        
         def one():
             """1"""
             print(".-------." + '\n'
@@ -25,7 +28,7 @@ class Dice():
                   "|       |" '\n'
                   "'-------'")
 
-        def two(self):
+        def two():
             """2"""
             print(".-------." + '\n'
                   "| O     |" '\n'
@@ -33,7 +36,7 @@ class Dice():
                   "|     O |" '\n'
                   "'-------'")
 
-        def three(self):
+        def three():
             """3"""
 
             print(".-------." + '\n'
@@ -42,7 +45,7 @@ class Dice():
                   "|     O |" '\n'
                   "'-------'")
 
-        def four(self):
+        def four():
             """4"""
             print(".-------." + '\n'
                   "| O   O |" '\n'
@@ -50,7 +53,7 @@ class Dice():
                   "| O   O |" '\n'
                   "'-------'")
 
-        def five(self):
+        def five():
             """5"""
             print(".-------." + '\n'
                   "| O   O |" '\n'
@@ -58,10 +61,24 @@ class Dice():
                   "| O   O |" '\n'
                   "'-------'")
 
-        def six(self):
+        def six():
             """6"""
             print(".-------." + '\n'
                   "| O   O |" '\n'
                   "| O   O |" '\n'
                   "| O   O |" '\n'
                   "'-------'")
+            
+        if number == 1:
+            one()
+        elif number == 2:
+            two()
+        elif number == 3:
+            three()
+        elif number == 4:
+            four()
+        elif number == 5:
+            five()
+        elif number == 6:
+            six()
+                    
