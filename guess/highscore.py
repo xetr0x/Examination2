@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-import asyncio
 
 class Highscore():
     """class for keeping track of highscore"""
@@ -11,11 +10,15 @@ class Highscore():
         self.player2 = player2
         self.player3 = player3
         self.player4 = player4
+        self.player1_name = "Player 1"
+        self.player2_name = "Player 2"
+        self.player3_name = "Player 3"
+        self.player4_name = "Player 4"
         # Makes the accessable inside class methods
-        Highscore.PLAYERS = {"Player 1": self.player1,
-                             "Player 2": self.player2,
-                             "Player 3": self.player3,
-                             "Player 4": self.player4}
+        Highscore.PLAYERS = {self.player1_name: self.player1,
+                             self.player2_name: self.player2,
+                             self.player3_name: self.player3,
+                             self.player4_name: self.player4}
         # player variables works as medium for the points
 
     def add_scores(self, score1, score2, score3=None, score4=None):
@@ -23,16 +26,16 @@ class Highscore():
         """adds and sorts scores"""
         # Player 3 - 4 will always exist but will be as none if not played
         # This way we can make them invinsible if not played, but still exist
-        player1 = ("Player 1", Highscore.PLAYERS.get("Player 1") + score1)
-        player2 = ("Player 2", Highscore.PLAYERS.get("Player 2") + score2)
-        if score3 and Highscore.PLAYERS.get("Player 3", None) is not None:
+        player1 = ("Player 1", Highscore.PLAYERS.get(self.player1_name) + score1)
+        player2 = ("Player 2", Highscore.PLAYERS.get(self.player2_name) + score2)
+        if score3 and Highscore.PLAYERS.get(self.player3_name, None) is not None:
             # if both are none
             # then it means that the player is non existent!
-            player3 = ("Player 3", Highscore.PLAYERS.get("Player 3") + score3)
+            player3 = ("Player 3", Highscore.PLAYERS.get( self.player3_name) + score3)
         else:
             player3 = None
-        if score4 and Highscore.PLAYERS.get("player 4", None) is not None:
-            player4 = ("Player 4", Highscore.PLAYERS.get("Player 4", None) +
+        if score4 and Highscore.PLAYERS.get(self.player4_name, None) is not None:
+            player4 = ("Player 4", Highscore.PLAYERS.get(self.player4_name, None) +
                        score4)
         else:
             player4 = None
@@ -63,3 +66,6 @@ class Highscore():
             if len(thelist) == 4:
                 print(f'{thelist[3][0]}{thelist[3][1]}')
                 print("------------------------------------------")
+
+    def set_player_name(self, player, newname):
+        
