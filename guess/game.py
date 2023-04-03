@@ -25,7 +25,7 @@ class Game:
         self.p1 = "player 1"
         self.p2 = "player 2"  # makes it possible to change name later
         self.p3 = "player 3"
-        self.p4 = "player 4"    
+        self.p4 = "player 4"
         self.playercount = 0  # counts amount of players
         self.players = {1: (self.p1, highscore.get("player 1")), 2: self.p2, 3: self.p3, 4: self.p4}
         self.player1 = self.highscore.player1
@@ -79,4 +79,6 @@ class Game:
         # TODO clearing cmd with 'cls'
         # TODO space on press input way  (method for press)
         # TODO keep playing (method)
+        # TODO keep track of which players turn it is
+        # TODO A round is done when all of the players have done their turn
 
